@@ -11,5 +11,33 @@
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aperiam labore natus obcaecati error saepe eligendi sunt? Soluta, necessitatibus unde tempore aperiam totam asperiores, doloremque, ducimus accusamus voluptas excepturi blanditiis!</p>
 
+
+
+function calculoMulta() {
+    let patente2 = solicitarPatente()
+    while (patente2 !== "ESC") {
+        if (patente2 !== " ") {
+            solicitarVelocidad()
+            if (velocidad <= 60) {
+                alert("la patente: " + patente + " no debe multas")
+                    
+            } else if ( velocidad = 65) {
+                alert("la patente: " + patente + " debe $60.000")
+                
+            } else if (  velocidad = 80) {
+                alert("la patente: " + patente + " debe $80.000")
+            
+            } else if (velocidad = 100) {
+                alert("la patente: " + patente + "debe $100.000")
+                
+
+            }
+
+        } else {
+            alert ("ingrese una patente")
+        }
+    }
+}
+
 </body>
 </html>
