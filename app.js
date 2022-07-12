@@ -139,3 +139,4 @@ let button = document.getElementById ("btnEvento")
 button.addEventListener ("click", () => {
     alert ("se oprimio el boton")
 })
+
