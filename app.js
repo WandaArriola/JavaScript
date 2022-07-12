@@ -47,7 +47,7 @@ calculoMulta()*/
 
 // busqueda de zona //
 
-const zona = [
+/*const zona = [
 
     { districto: "Vince Lopez", direccion: "Savedra 1256" },
     { districto: "San Isidro", direccion: "Peron 5896" },
@@ -104,4 +104,38 @@ function turno() {
 
 turno ()
 
-//fin solicitud de dia y horario //
+//fin solicitud de dia y horario //*/
+
+// inicio login//
+
+/*let inputCorreo = document.getElementById ("inputCorreo")
+let inputContrasenia = document.getElementById ("inputContrasenia")
+
+
+
+console.log (inputCorreo.value)
+inputCorreo.value = "Wanda@prueba.com"
+console.log (inputCorreo.value)
+console.log (inputContrasenia.value)
+
+
+function cambiar(){
+    inputCorreo2 = inputCorreo
+
+    let inputCorreo = document.getElementById ("inputCorreo")
+
+    console.log (inputCorreo.innerText)
+    inputCorreo.innerText = "correo del usuario"
+    console.log (inputCorreo.innerText)
+}
+
+boton.onclick = cambiar;*/  
+
+
+
+
+let button = document.getElementById ("btnEvento")
+
+button.addEventListener ("click", () => {
+    alert ("se oprimio el boton")
+})
