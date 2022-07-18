@@ -32,3 +32,11 @@ button2{
 }
 /*fin formulario*/
 
+.containerZona{
+    background-color: rgba(94, 109, 175, 0.548);
+    height: 200px;
+    width: 400px;
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
