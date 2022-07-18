@@ -1,24 +1,43 @@
 
+// inicio loggin //
 
-/*function solicitarPatente() {
-    let patente = prompt("Este programa indica el saldo de la multa según la velocidad. Ingrese su patente (ESC para salir)")
-    return patente;
+function capturar (){
+    let emails=document.getElementById("email").value;
+    let pwds=document.getElementById("pwd").value;
+
+    alert ( "usted inicio sesion con el correo " + emails)
+    pwds 
 }
 
+let button = document.getElementById('btnEvento')
 
-function solicitarVelocidad() {
-    let velocidad = parseInt(prompt("ingrese la velocidad a la que circulaba"))
-    return velocidad
+button.addEventListener('click', () => {
+    capturar ()
+})
+
+// fin loggin //
+
+
+// inico consulta de multa //
+
+function capturarPatente (){
+    let patentes=document.getElementById("patente").value;
+    return patentes 
+    
+}
+function capturarVelovidad (){
+    let velocidads=document.getElementById("velocidad").value;
+    return velocidads 
 }
 
 
 function calculoMulta() {
-    let patente2 = solicitarPatente ()
+    let patente2 = capturarPatente ()
 
     while (patente2 !== "ESC"){
         if (patente2 !== ""){
             
-            let velocidad2 = solicitarVelocidad ()
+            const velocidad2 = capturarVelovidad ()
                 
             if (velocidad2 < 60){
                     alert ("La patente: " + patente2 + " no debera pagar multa")
@@ -37,17 +56,21 @@ function calculoMulta() {
         }else{
             alert ("ingrese una patente")
         }
-        patente2 = solicitarPatente ()
+        patente2 = capturarPatente
 
     }
 }
 
-calculoMulta()*/
+let button3 = document.getElementById('btnEvento3')
 
+button3.addEventListener('click', () => {
+    calculoMulta ()
+})
+// fin consulta de multa //
 
-// busqueda de zona //
+// solicitud turno //
 
-/*const zona = [
+const zonas = [
 
     { districto: "Vince Lopez", direccion: "Savedra 1256" },
     { districto: "San Isidro", direccion: "Peron 5896" },
@@ -61,82 +84,50 @@ calculoMulta()*/
     { districto: "San Martín", direccion: "Ilia 7926" },
 ]
 
-
-alert("Este programa de verificación de multas corresponde a zona norte")
-
-function solicitarZona() {
-    let zona = prompt("Indique el districto donde fue cometida la infracción")
-    return zona;
+function zonas4(){
+    let zona3 = capturarZona()
+    const buscando = zonas.find((nombre) => nombre.districto === zona3)
+    console.log(buscando)
 }
 
-let zona2 = solicitarZona()
-
-const buscando = zona.find((nombre) => nombre.districto === zona2)
-
-console.log (buscando)
-
-// fin busqueda //
-
-//solicitud de turno para dia y horario//
-
-function solicitarDia() {
-    let dia = prompt("ingrese un día de la semana de lunes a viernes")
-    return dia
+function capturarZona(){
+    let localidades=document.getElementById("localidad").value;
+    return localidades
 }
-
-function solicitarHora() {
-    let hora = parseInt(prompt("los horarios disponibles son: \n 10:30 \n 11:45 \n 13:15 \n 15:00"))
-    return hora
+function capturarDia(){
+    let dias=document.getElementById("dia").value;
+    return dias
+}
+function capturarHora(){
+    let horarios=document.getElementById("horario").value;
+    return horarios
 }
 
 function turno() {
 
-    dia2 = solicitarDia()
-    hora2 = solicitarHora()
+    let zona2 = capturarZona ()
+    let dia2 = capturarDia ()
+    let hora2 = capturarHora()
 
-    const listaDias = ["lunes", "martes", "miércoles", "jueves", "viernes"];
 
-    console.log(listaDias.includes(dia2))
-    
-    alert("usted tiene turno el día " + dia2 + " a las " + hora2 + " en " + zona2 )
+const listaDias = ["lunes", "martes", "miércoles", "jueves", "viernes"];
+
+console.log(listaDias.includes(dia2))
+
+alert("usted tiene turno el día " + dia2 + " a las " + hora2 + " en " + zona2)
 
 }
 
-turno ()
+let button2 = document.getElementById('btnEvento2')
 
-//fin solicitud de dia y horario //*/
-
-// inicio login//
-
-/*let inputCorreo = document.getElementById ("inputCorreo")
-let inputContrasenia = document.getElementById ("inputContrasenia")
-
-
-
-console.log (inputCorreo.value)
-inputCorreo.value = "Wanda@prueba.com"
-console.log (inputCorreo.value)
-console.log (inputContrasenia.value)
-
-
-function cambiar(){
-    inputCorreo2 = inputCorreo
-
-    let inputCorreo = document.getElementById ("inputCorreo")
-
-    console.log (inputCorreo.innerText)
-    inputCorreo.innerText = "correo del usuario"
-    console.log (inputCorreo.innerText)
-}
-
-boton.onclick = cambiar;*/  
-
-
-
-
-let button = document.getElementById ("btnEvento")
-
-button.addEventListener ("click", () => {
-    alert ("se oprimio el boton")
+button2.addEventListener('click', () => {
+    turno ()
+    zonas4 ()
 })
+
+//fin solicitud turno //
+
+
+
+
 
