@@ -123,9 +123,29 @@ let button2 = document.getElementById('btnEvento2')
 button2.addEventListener('click', () => {
     turno ()
     zonas4 ()
+    storage ()
 })
 
+function storage() {
+
+    let zona5 = capturarZona ()
+    let dia5 = capturarDia ()
+    let hora5= capturarHora()
+
+    localStorage.setItem ("zona", zona5)
+    localStorage.setItem ("dia", dia5)
+    localStorage.setItem ("hora", hora5)
+
+    let nombre = localStorage.getItem ("zona")
+    let dia = localStorage.getItem ("dia")
+    let hora = localStorage.getItem ("hora")
+
+    console.log ("zona:" + nombre)
+    console.log ("dia:" + dia)
+    console.log ("hora" + hora )
+}
 //fin solicitud turno //
+
 
 
 
