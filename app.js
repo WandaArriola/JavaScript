@@ -1,21 +1,34 @@
 
-// inicio loggin //
+// inicio login //
 
 function capturar (){
     let emails=document.getElementById("email").value;
-    let pwds=document.getElementById("pwd").value;
+    //let pwds=document.getElementById("pwd").value;
 
-    alert ( "usted inicio sesion con el correo " + emails)
-    pwds 
+    return emails
+    //pwds
+
+}
+
+function MostarAlert1() {
+    capturarMail = capturar ()
+    Swal.fire({
+        icon: "succes",
+        title: 'iminicio sesión correctamente ',
+        text: 'inicistae sesión con el mail' + capturarMail ,
+
+    })
 }
 
 let button = document.getElementById('btnEvento')
 
 button.addEventListener('click', () => {
     capturar ()
+    MostarAlert1 ()
+    
 })
 
-// fin loggin //
+// fin login //
 
 
 // inico consulta de multa //
@@ -40,16 +53,40 @@ function calculoMulta() {
             const velocidad2 = capturarVelovidad ()
                 
             if (velocidad2 < 60){
-                    alert ("La patente: " + patente2 + " no debera pagar multa")
+                //alert ("La patente: " + patente2 + " no debera pagar multa")
+                Swal.fire({
+                    icon: "succes",
+                    title: 'la pante: '+ patente2 + ' no debe pagar multas',
+                    text: '' ,
+            
+                })
                     break
                 } else if (velocidad2 > 100){
-                    alert ("La patente: " + patente2 + " debera pagar una multa de $100.000")
+                    //alert ("La patente: " + patente2 + " debera pagar una multa de $100.000")
+                    Swal.fire({
+                        icon: "succes",
+                        title: 'la pante: '+ patente2 + ' debe pagar una multa de $100.000',
+                        text: 'Si desea abonar su multa solicite un turno' ,
+                
+                    })
                     break
                 } else if (velocidad2 > 80){
-                    alert ("La patente: " + patente2 + " debera pagar una multa de $80.000")
+                    //alert ("La patente: " + patente2 + " debera pagar una multa de $80.000")
+                    Swal.fire({
+                        icon: "succes",
+                        title: 'la pante: '+ patente2 + ' debe pagar una multa de $80.000',
+                        text: 'Si desea abonar su multa solicite un turno' ,
+                
+                    })
                     break
                 } else if (velocidad2 > 60){
-                    alert ("La patente: " + patente2 + " debera pagar una multa de $60.000")
+                    //alert ("La patente: " + patente2 + " debera pagar una multa de $60.000")
+                    Swal.fire({
+                        icon: "succes",
+                        title: 'la pante: '+ patente2 + ' debe paga runa multa de $60.000',
+                        text: 'Si desea abonar su multa solicite un turno' ,
+                
+                    })
                     break
                 }
 
@@ -104,18 +141,25 @@ function capturarHora(){
 }
 
 function turno() {
-
-    let zona2 = capturarZona ()
     let dia2 = capturarDia ()
-    let hora2 = capturarHora()
-
 
 const listaDias = ["lunes", "martes", "miércoles", "jueves", "viernes"];
 
 console.log(listaDias.includes(dia2))
+}
 
-alert("usted tiene turno el día " + dia2 + " a las " + hora2 + " en " + zona2)
 
+function MostarAlert3() {
+    let zona2 = capturarZona ()
+    let dia2 = capturarDia ()
+    let hora2 = capturarHora()
+
+    Swal.fire({
+        icon: "succes",
+        title: 'Su turno se solicitó exitosamente',
+        text: 'usted tiene turno el día '+ dia2 + ' a las '+ hora2 + ' en '+ zona2 ,
+
+    })
 }
 
 let button2 = document.getElementById('btnEvento2')
@@ -124,6 +168,7 @@ button2.addEventListener('click', () => {
     turno ()
     zonas4 ()
     storage ()
+    MostarAlert3 ()
 })
 
 function storage() {
