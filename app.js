@@ -191,8 +191,30 @@ function storage() {
 }
 //fin solicitud turno //
 
+//inicio fetch//
+const contenedorComentarios = document.getElementById ("comentarios")
+
+function obtenerComent{
+    fetch("https://jsonplaceholder.typicode.com/comments")
+    .them ((response) => response.json ())
+    .them ((data) =>{
+    console.log (data)
+    console.log (data[0].body)
+
+    data.forEach(comentario => {
+        let columna = document.createElement ("div")
+        columna.classname = "col-md-3"
+        columna.innerHTML = <p>${comentario}</p>
+        contenedorComentarios.appendChild(columna)
+    });
+
+    })
+
+}
+
+obtenerComent ()
+// fin fetch//
 
 
-
-
+ 
 
